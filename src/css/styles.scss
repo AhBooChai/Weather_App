@@ -64,10 +64,10 @@ body {
             }
         }
         #error {
-            //display: none;
+            display: none;
             font-size: 13px;
             left: calc(20px + 3vw);
-            margin-top: 5px;
+            margin-top: 10px;
             color: red;
             text-align: left;
         }
@@ -76,7 +76,7 @@ body {
         text-align: center;
         background-color: pink;
         .information-showcase {
-            height: 350px;
+            height: 250px;
             #city {
                 margin-bottom: 1.5rem;
             }

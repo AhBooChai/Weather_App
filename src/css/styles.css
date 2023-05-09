@@ -69,9 +69,10 @@ body {
 }
 
 .container header #error {
+  display: none;
   font-size: 13px;
   left: calc(20px + 3vw);
-  margin-top: 5px;
+  margin-top: 10px;
   color: red;
   text-align: left;
 }
@@ -82,7 +83,7 @@ body {
 }
 
 .container main .information-showcase {
-  height: 350px;
+  height: 250px;
 }
 
 .container main .information-showcase #city {
