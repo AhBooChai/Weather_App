@@ -4,9 +4,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  background-color: #e6e5e5;
-  color: #2F3744;
   font-size: 1rem;
+  overflow: hidden;
 }
 
 body {
@@ -26,6 +25,50 @@ body {
   padding: 1.5rem;
   box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.55), 10px 10px 15px rgba(70, 70, 70, 0.12);
   border-radius: 10px;
+  background-color: #F2D7D3;
+  color: #2F3744;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container .waves {
+  width: 300vw;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  z-index: -2;
+}
+
+.container .waves .wave {
+  opacity: 1;
+  position: absolute;
+  top: 70%;
+  background: #18DFAD;
+  width: 100%;
+  height: 300vw;
+  transform-origin: 50% 49%;
+  border-radius: 49%;
+  -webkit-animation: drift 3000ms infinite linear;
+  animation: drift 8000ms infinite linear;
+  will-change: transform;
+}
+
+.container .waves .wave.-two {
+  animation: drift 9000ms infinite linear;
+  opacity: 1;
+  background: #33476a;
+  top: 70%;
+}
+
+.container .waves .wave.-three {
+  animation: drift 4000ms infinite linear;
+  opacity: 1;
+  background: #F12645;
+  top: 70%;
+  z-index: -2;
 }
 
 .container header {
@@ -44,25 +87,26 @@ body {
 .container header .searchBox img {
   width: 45px;
   height: 45px;
+  border-radius: 50%;
   padding: 10px;
-  transition: 0.2s ease-out;
-  box-shadow: -2px -2px 6px white, 2px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-out;
+  box-shadow: -2px -2px 6px white, 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .container header .searchBox img:hover {
-  transform: scale(1.03);
+  transform: scale(1.07);
 }
 
 .container header .searchBox input {
-  width: 95%;
+  width: 90%;
   height: 50px;
-  padding: 10px;
+  padding: 15px;
   border: none;
   outline: none;
   background-color: #FFFFFF;
-  border-radius: 5px;
+  border-radius: 45px;
   left: calc(20px + 3vw);
-  margin-right: 1.5rem;
+  margin-right: 1rem;
   color: #2F3744;
   background: transparent;
   box-shadow: inset -2px -2px 6px white, inset 2px 2px 6px rgba(0, 0, 0, 0.1);
@@ -79,7 +123,7 @@ body {
 
 .container main {
   text-align: center;
-  background-color: pink;
+  z-index: 3;
 }
 
 .container main .information-showcase {
@@ -102,6 +146,7 @@ body {
   align-items: center;
   justify-content: space-evenly;
   font-size: 14px;
+  color: #fff9e1;
 }
 
 .container main .details div {
@@ -113,11 +158,20 @@ body {
 }
 
 .container main .details div svg {
-  fill: #2F3744;
+  fill: #fff9e1;
 }
 
 .container main .details small {
   font-size: 10px;
+}
+
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
 }
 
 
